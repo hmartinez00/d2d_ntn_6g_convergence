@@ -1,0 +1,20 @@
+{
+    "fig1.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y flechas. Diagrama de arquitectura de convergencia TN-NTN 6G: red terrestre (células 6G) conectada a core network, satélites LEO con payloads regenerativos, dispositivos móviles estándar con flechas D2D directas hacia satélites y estaciones base. Mostrar handover seamless TN-NTN, capas de orquestación inteligente y flujos de datos bidireccionales. Iconos simples de satélite, torre celular, smartphone y avión. Sin sombras, sin gradientes, sin texto incrustado dentro de la imagen, estilo IEEE técnico limpio y profesional, líneas precisas y espaciado equilibrado"
+    },
+    "fig2.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y ejes. Gráfico de evolución temporal (eje X: años 2021-2026, eje Y: número de publicaciones). Tres líneas o barras apiladas: NTN 3GPP (azul cobalto), D2D Satelital (gris oscuro), Integración TN-NTN 6G (negro). Marcadores circulares en puntos de datos clave. Leyenda clara en parte superior. Estilo IEEE técnico limpio, líneas suaves y precisas, sin sombras, sin gradientes, sin texto incrustado dentro de la imagen"
+    },
+    "fig3.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y flechas. Diagrama completo de arquitectura híbrida TN-NTN 6G: red terrestre con estaciones base 6G a la izquierda, constelación LEO con payloads regenerativos en el centro, dispositivos móviles en tierra, mar y aire conectados vía D2D. Mostrar enlaces directos a satélites y handover seamless con flechas bidireccionales. Capas superiores de orquestación y core network. Iconos simples de torre celular, satélite LEO, smartphone y avión. Sin sombras, sin gradientes, sin texto incrustado dentro de la imagen, estilo IEEE técnico limpio y profesional, líneas precisas y espaciado equilibrado"
+    },
+    "fig4.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y flechas. Diagrama de protocolos de handover TN-NTN: flujo secuencial mostrando dispositivo móvil pasando de estación base terrestre a satélite LEO y viceversa. Incluir bloques de Measurement, Decision, Execution, Timing Advance y Doppler Compensation. Flechas bidireccionales claras y etapas numeradas. Iconos simples de torre celular, satélite, smartphone y señales de radio. Sin sombras, sin gradientes, sin texto incrustado dentro de la imagen, estilo IEEE técnico limpio y profesional, líneas precisas y espaciado equilibrado"
+    },
+    "fig5.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y bordes. Tabla comparativa visual de arquitecturas TN-NTN convertida en diagrama de radar o barras agrupadas: ejes para Soporte D2D, Orquestación, Eficiencia Energética, Cobertura y Madurez. Tres series: Bent-pipe (gris), Rel-19 (azul claro), Propuesta Híbrida (azul cobalto). Estilo IEEE técnico limpio, sin sombras, sin gradientes, sin texto incrustado dentro de la imagen, líneas precisas y leyenda clara en parte inferior"
+    },
+    "no_figure": {
+        "prompt_ia": "Esta sección no requiere figuras ni tablas adicionales según la especificación."
+    }
+}

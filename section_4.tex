@@ -1,0 +1,46 @@
+\section{Estándares y Tecnologías Habilitadoras}
+
+\subsection{3GPP Releases y Roadmap 6G}
+
+Resulta revelador observar cómo 3GPP ha acelerado en los últimos años la incorporación de capacidades NTN dentro del ecosistema celular. 
+
+La Release 17 estableció las bases con soporte básico para NTN en modo bent-pipe, mientras que la Release 18 introdujo mejoras sustanciales en corrección de frecuencia y timing advance. La Release 19 marca un punto de inflexión al incorporar payloads regenerativos y funcionalidades avanzadas de D2D. Análisis industriales recientes enfatizan que este camino prepara el terreno para una integración nativa TN-NTN en las primeras releases 6G \cite{Ericsson2025_NTN}. 
+
+La documentación oficial de 3GPP confirma que Rel-19 ya contempla escenarios de movilidad mejorada y optimizaciones específicas para órbitas LEO \cite{3GPP_NTNR19}. No obstante, cabe matizar que el roadmap todavía presenta brechas importantes en lo que respecta a orquestación inteligente y soporte completo de D2D multi-banda.
+
+\subsection{Técnicas de Mitigación Doppler y Movilidad}
+
+Uno de los desafíos persistentes al operar en órbitas bajas radica en manejar velocidades relativas que generan desplazamientos Doppler de decenas de kHz. 
+
+Las soluciones actuales combinan pre-compensación en el lado del satélite, estimación avanzada de canal en el dispositivo y mecanismos de timing advance mejorados. La Release 19 introduce procedimientos de handover TN-NTN más robustos que consideran predicción de trayectoria satelital. Estas técnicas resultan esenciales para mantener la sincronización y minimizar interrupciones en escenarios de movilidad continua.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=1\linewidth]{fig4.pdf}
+\caption{Protocolos de handover TN-NTN propuestos para convergencia D2D en redes 6G.}
+\label{fig:handover_protocols}
+\end{figure}
+
+Aunque estas mejoras representan un avance significativo, en muchos casos estudiados todavía generan overhead de señalización que impacta el consumo energético de dispositivos de bajo perfil.
+
+\subsection{Gestión de Recursos e Interferencias}
+
+Lejos de ser un asunto resuelto, la gestión eficiente de recursos en entornos de convergencia TN-NTN exige enfoques más sofisticados que los utilizados en redes puramente terrestres. 
+
+La coexistencia de enlaces terrestres y satelitales genera patrones complejos de interferencia, especialmente en bandas compartidas. Encuestas recientes sobre D2D satelital destacan la importancia de técnicas como beamforming dinámico, control de potencia adaptativo y asignación de recursos asistida por IA para mitigar estas interferencias \cite{Pasandi2024_D2DSurvey}.
+
+\begin{table}[t]
+\centering
+\caption{Requisitos técnicos por banda para D2D-NTN}
+\label{tab:band_requirements}
+\begin{tabular}{lccc}
+\hline
+Banda & Ancho de Banda & Doppler Máx. (kHz) & Consumo Energético Relativo \\
+\hline
+Sub-7 GHz (n256) & 10-20 MHz & $\sim 15$ & Bajo \\
+Ka-band & 100-400 MHz & $\sim 45$ & Alto \\
+\hline
+\end{tabular}
+\end{table}
+
+La Tabla 3 resume los principales requisitos y trade-offs por banda. La arquitectura propuesta incorpora un módulo de orquestación que realiza asignación conjunta de recursos, priorizando enlaces terrestres en áreas densas y satelitales en zonas de baja cobertura. Esta aproximación mejora notablemente la eficiencia espectral global, aunque aumenta la complejidad de implementación en el core network.

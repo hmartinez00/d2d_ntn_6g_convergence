@@ -1,0 +1,49 @@
+\section{Estado del Arte}
+
+\subsection{Evolución 3GPP NTN (Rel-17 a Rel-19)}
+
+Resulta revelador observar cómo 3GPP ha transformado en pocos años las redes no terrestres de una característica opcional a un componente estructural del ecosistema móvil. 
+
+La Release 17 introdujo el soporte básico para NTN en NR, enfocándose principalmente en escenarios de órbita geoestacionaria con enlaces bent-pipe. La Release 18 profundizó en movilidad y corrección Doppler, mientras que la Release 19 avanza hacia capacidades más ambiciosas de payloads regenerativos y optimización conjunta TN-NTN. Perspectivas industriales recientes subrayan que, aunque el progreso es tangible, todavía existen brechas importantes entre las especificaciones y el rendimiento real en entornos LEO con conectividad Direct-to-Device \cite{Ericsson2025_NTN}.
+
+Particularmente llamativo es el hecho de que el enfoque actual priorice compatibilidad hacia atrás con dispositivos legacy, limitando en muchos casos el aprovechamiento pleno de las ventajas de la integración.
+
+\subsection{Avances en D2D Satelital}
+
+Uno de los desafíos persistentes al analizar la conectividad directa satelital radica en la fragmentación entre soluciones propietarias y esfuerzos estandarizados. 
+
+Encuestas exhaustivas recientes documentan un crecimiento acelerado en propuestas D2D para satélites LEO, con avances notables en técnicas de sincronización, gestión de interferencias y protocolos de acceso aleatorio adaptados a canales con Doppler severo y retardos variables \cite{Pasandi2024_D2DSurvey}. Empresas como AST SpaceMobile, Lynk Global y proyectos europeos han demostrado viabilidad comercial en pruebas de campo, logrando conexiones LTE/5G directas a dispositivos estándar.
+
+No obstante, cabe matizar que la mayoría de estos avances se concentran en escenarios específicos y todavía presentan limitaciones importantes en throughput sostenido, consumo energético del dispositivo y escalabilidad masiva. La brecha entre demostraciones controladas y despliegues a escala global permanece significativa.
+
+\subsection{Integración TN-NTN en 6G}
+
+Lejos de ser un asunto resuelto, la convergencia nativa entre redes terrestres y no terrestres constituye uno de los temas más activos en la hoja de ruta hacia 6G. 
+
+Trabajos recientes destacan la importancia de arquitecturas orquestadas que permitan slicing dinámico, handover seamless y optimización conjunta de recursos entre ambos dominios \cite{Wang2025_NTN6G}. Estas propuestas exploran desde el uso de gemelos digitales hasta inteligencia artificial para predicción de movilidad y asignación de recursos.
+
+\begin{table}[t]
+\centering
+\caption{Comparativa de Releases 3GPP para NTN}
+\label{tab:3gpp_releases}
+\begin{tabular}{lccc}
+\hline
+Release & Año & Principales aportes NTN & Soporte D2D \\
+\hline
+Rel-17 & 2022 & NTN básico (bent-pipe) & Limitado \\
+Rel-18 & 2024 & Mejoras Doppler y movilidad & Parcial \\
+Rel-19 & 2025 & Payloads regenerativos & Mejorado \\
+Rel-20+ (6G) & 2027+ & Integración nativa TN-NTN & Nativo \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+% \includegraphics[width=0.95\linewidth]{fig2.png}
+\scalebox{1}{\input{codes/fig2.tex}}
+\caption{Evolución temporal de publicaciones académicas y técnicas en NTN, D2D satelital e integración TN-NTN (2021-2026).}
+\label{fig:publications_evolution}
+\end{figure}
+
+En conjunto, el estado del arte muestra un progreso prometedor pero todavía fragmentado. Mientras los estándares 3GPP avanzan de forma estructurada, la verdadera convergencia TN-NTN con D2D nativo requiere soluciones que vayan más allá de la mera suma de componentes. Esta observación motiva directamente el marco arquitectónico que se desarrolla en las siguientes secciones.

@@ -1,0 +1,42 @@
+\section{Discusión y Implicaciones}
+
+\subsection{Implicaciones para Despliegues Comerciales}
+
+Resulta revelador observar cómo una arquitectura que integra D2D con NTN deja de ser un concepto teórico para impactar directamente las estrategias de despliegue de operadores y fabricantes. 
+
+La capacidad de ofrecer cobertura complementaria en zonas remotas, marítimas y aéreas abre nuevos modelos de negocio, especialmente para operadores que buscan diferenciarse mediante servicios de conectividad ubicua. Perspectivas industriales recientes sugieren que los despliegues iniciales se centrarán en bandas sub-7 GHz para maximizar compatibilidad con dispositivos existentes, reservando Ka-band para backhaul y casos de uso de alta capacidad \cite{Ericsson2025_NTN}.
+
+Aunque prometedor, el modelo económico requiere atención. El mayor consumo energético en uplink satelital y la necesidad de constelaciones densas elevan los costos operativos. La orquestación inteligente TN-NTN se convierte entonces en factor diferenciador clave para mantener márgenes competitivos.
+
+\subsection{Aspectos Regulatorios y Éticos}
+
+Uno de los desafíos persistentes al escalar estas tecnologías radica en el delicado equilibrio entre innovación técnica y gobernanza. 
+
+La asignación de espectro compartido entre sistemas terrestres y satelitales genera tensiones regulatorias que varían significativamente entre regiones. Cuestiones como la interferencia transfronteriza, la responsabilidad en caso de fallos en servicios críticos y la protección de datos en enlaces satelitales demandan marcos regulatorios actualizados. 
+
+Desde el punto de vista ético, la convergencia D2D-NTN puede ayudar a reducir la brecha digital global, pero también plantea riesgos de vigilancia masiva y dependencia tecnológica en países en desarrollo. No obstante, cabe matizar que estos desafíos no son exclusivos de NTN, aunque se magnifican por la naturaleza transnacional de las constelaciones LEO.
+
+\subsection{Comparación con Estado del Arte}
+
+Lejos de ser un asunto resuelto, la integración TN-NTN sigue evolucionando entre visiones ambiciosas y restricciones prácticas. 
+
+El marco propuesto se distingue por su énfasis en orquestación inteligente y soporte D2D nativo multi-banda, superando enfoques que tratan NTN como mera extensión de cobertura. Comparado con revisiones recientes del campo \cite{Wang2025_NTN6G}, ofrece una contribución concreta al abordar de forma conjunta aspectos arquitectónicos, estándares y operativos que muchos trabajos abordan de manera aislada.
+
+\begin{table}[t]
+\centering
+\caption{Comparación de arquitecturas TN-NTN para conectividad D2D en 6G}
+\label{tab:architecture_comparison}
+\begin{tabular}{lccc}
+\hline
+Arquitectura & Soporte D2D & Orquestación TN-NTN & Madurez Técnica \\
+\hline
+Bent-pipe tradicional & Limitado & Baja & Alta \\
+Payload regenerativo (3GPP Rel-19) & Parcial & Media & Media \\
+\textbf{Propuesta (Híbrida con IA)} & Nativo & Alta & Media-Alta \\
+\hline
+\end{tabular}
+\end{table}
+
+En nuestra experiencia, esta hibridación no solo mejora métricas técnicas sino que aporta flexibilidad operativa difícil de conseguir con soluciones fragmentadas. Claro está que todavía queda camino por recorrer, especialmente en validación a gran escala y estandarización completa.
+
+En definitiva, el marco presentado aporta un paso concreto hacia la visión 6G de conectividad verdaderamente ubicua y resiliente.

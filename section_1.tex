@@ -1,0 +1,49 @@
+\section{Introducción}
+
+\subsection{Motivación y Contexto 6G}
+
+Aunque las redes terrestres han alcanzado niveles notables de madurez, la ambición de una conectividad ubicua y resiliente para el ecosistema 6G exige algo más ambicioso. La integración profunda entre redes terrestres (TN) y no terrestres (NTN) emerge como uno de los pilares estratégicos para cumplir con los requisitos de cobertura global, especialmente en zonas remotas, marítimas y aéreas.
+
+Resulta particularmente llamativo observar cómo la visión 6G trasciende la simple extensión de cobertura para proponer una convergencia nativa que permita a dispositivos comerciales estándar conectarse directamente a satélites LEO sin hardware especializado. Revisiones recientes destacan que esta integración no solo amplía el alcance, sino que introduce resiliencia inherente frente a fallos terrestres y habilita nuevos casos de uso críticos \cite{Wang2025_NTN6G}.
+
+\subsection{Evolución de NTN y D2D}
+
+Uno de los desafíos persistentes al analizar el panorama actual radica en la desconexión histórica entre los desarrollos de conectividad directa satelital y las redes celulares tradicionales. 
+
+La evolución de NTN dentro de 3GPP ha pasado de soluciones mínimas en Release 17 a capacidades más maduras en Release 19, mientras que los esfuerzos en Direct-to-Device (D2D) satelital ganan tracción comercial. Trabajos recientes ilustran cómo esta conectividad D2D puede operar de forma integrada en escenarios terrestres, aéreos y marítimos, facilitando roaming seamless entre TN y NTN \cite{Ullah2026_D2D}.
+
+No obstante, cabe matizar que la mayoría de implementaciones todavía operan en silos, con limitaciones importantes en gestión de Doppler severo, handover eficiente y optimización conjunta de recursos.
+
+\subsection{Contribuciones del Trabajo}
+
+Este artículo propone un marco técnico integral para la convergencia D2D-NTN en el ecosistema 6G. 
+
+Nuestro enfoque combina una arquitectura híbrida TN-NTN con payloads regenerativos, orquestación inteligente y soporte nativo para D2D en múltiples bandas. Inspirados en arquitecturas LEO avanzadas que integran comunicación y posicionamiento \cite{DeGaudenzi2026_NTN}, el marco presentado busca cerrar brechas identificadas entre estándares actuales y requisitos operacionales reales de 6G.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\linewidth]{fig1.pdf}
+\caption{Visión general de la arquitectura propuesta para convergencia D2D-NTN en redes 6G.}
+\label{fig:architecture_overview}
+\end{figure}
+
+La Tabla 1 compara las características fundamentales de redes TN y NTN, destacando las sinergias y trade-offs que motivan el marco unificado.
+
+\begin{table}[t]
+\centering
+\caption{Comparación entre redes TN y NTN para conectividad D2D en 6G}
+\label{tab:tn_ntn_comparison}
+\begin{tabular}{lcc}
+\hline
+Característica & Redes TN & Redes NTN \\
+\hline
+Cobertura & Urbana/densa & Global/remota \\
+Latencia & Baja (<10 ms) & Media-alta (20-100 ms) \\
+Movilidad & Alta velocidad terrestre & Doppler severo (LEO) \\
+Disponibilidad & Vulnerable a desastres & Alta resiliencia \\
+Consumo energético dispositivo & Bajo & Crítico en uplink \\
+\hline
+\end{tabular}
+\end{table}
+
+En síntesis, las contribuciones principales incluyen la definición de una arquitectura reproducible, el análisis detallado de desafíos técnicos con soluciones concretas y la identificación de caminos hacia una implementación práctica que aproveche el potencial completo de la convergencia D2D-NTN.

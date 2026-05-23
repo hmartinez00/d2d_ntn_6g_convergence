@@ -1,0 +1,49 @@
+\section{Desafíos Técnicos y Soluciones}
+
+\subsection{Desafíos de Canal y Propagación}
+
+Particularmente llamativo es el hecho de que el canal D2D en entornos NTN presente características radicalmente distintas a las de las redes terrestres convencionales. 
+
+La combinación de gran distancia, movimiento relativo extremo y efectos atmosféricos genera pérdidas de propagación severas, desvanecimiento por sombra y variaciones rápidas de fase. Trabajos recientes en arquitecturas LEO para D2D destacan que el Doppler severo y la alta variabilidad del canal constituyen los principales obstáculos para enlaces estables \cite{DeGaudenzi2026_NTN}. 
+
+Análisis de cobertura en escenarios reales refuerzan estas observaciones, mostrando que la disponibilidad de servicio cae drásticamente en entornos urbanos con obstrucciones o en latitudes altas \cite{Ullah2026_D2D}. La arquitectura propuesta incorpora estimación avanzada de canal asistida por IA y beamforming dinámico para mitigar estos efectos, aunque no los elimina por completo.
+
+\subsection{Movilidad y Handover}
+
+Uno de los desafíos persistentes al desplegar conectividad D2D en constelaciones LEO radica en la gestión eficiente de handover frecuente. 
+
+A diferencia de las redes terrestres, donde los usuarios se mueven frente a infraestructuras fijas, aquí es la infraestructura la que se desplaza a gran velocidad respecto al usuario. Esto genera ventanas de visibilidad cortas y exige mecanismos de predicción de trayectoria y preparación anticipada de enlaces. Las técnicas de mitigación Doppler y timing advance avanzadas de 3GPP Rel-19 ayudan, pero resultan insuficientes en escenarios de alta densidad o movilidad combinada (usuario + satélite).
+
+La solución propuesta incluye un protocolo de handover predictivo TN-NTN que aprovecha gemelos digitales para minimizar interrupciones y optimizar el timing de conmutación.
+
+\subsection{Eficiencia Energética y Escalabilidad}
+
+Lejos de ser un asunto resuelto, la eficiencia energética se convierte en un cuello de botella crítico cuando se pretende conectar miles de millones de dispositivos mediante NTN. 
+
+El uplink satelital exige mayor potencia de transmisión desde el dispositivo, impactando directamente la autonomía de baterías en terminales IoT y smartphones. Revisiones comprehensivas del campo 6G señalan que la escalabilidad masiva solo será viable si se logra una orquestación inteligente que minimice el consumo mediante selección dinámica de enlaces y modos de transmisión de baja potencia \cite{Wang2025_NTN6G}.
+
+\begin{table}[t]
+\centering
+\caption{Trade-offs arquitectónicos en convergencia D2D-NTN}
+\label{tab:tradeoffs}
+\begin{tabular}{lcc}
+\hline
+Aspecto & Ventaja & Desventaja Principal \\
+\hline
+Cobertura & Global y resiliente & Alto consumo energético uplink \\
+Latencia & Aceptable con payloads regenerativos & Mayor que TN puro \\
+Escalabilidad & Alta con orquestación & Complejidad de gestión \\
+Interferencia & Gestionable con beamforming & Desafiante en bandas compartidas \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+% \includegraphics[width=0.95\linewidth]{fig5.png}
+\scalebox{0.5}{\input{codes/fig5.tex}}
+\caption{Análisis de cobertura simulada para conectividad D2D-NTN en escenarios urbanos, suburbanos y remotos.}
+\label{fig:coverage_analysis}
+\end{figure}
+
+La Tabla 4 sintetiza los principales trade-offs. Aunque los resultados de simulación son prometedores, persisten limitaciones importantes en escenarios de alta densidad de dispositivos, lo que señala la necesidad de continuar investigando técnicas de agrupamiento cooperativo y transmisión discontinua.
