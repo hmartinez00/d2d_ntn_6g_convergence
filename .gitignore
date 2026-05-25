@@ -22,3 +22,5 @@ main.run.xml
 
 # --- No subir el PDF final ---
 *.pdf
+
+export_pdf.py
