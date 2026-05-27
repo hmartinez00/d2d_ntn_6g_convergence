@@ -29,7 +29,7 @@ Lejos de ser un asunto resuelto, la gestión eficiente de recursos en entornos d
 
 La coexistencia de enlaces terrestres y satelitales genera patrones complejos de interferencia, especialmente en bandas compartidas. Encuestas recientes sobre D2D satelital destacan la importancia de técnicas como beamforming dinámico, control de potencia adaptativo y asignación de recursos asistida por IA para mitigar estas interferencias \cite{Pasandi2024_D2DSurvey}.
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \caption{Requisitos técnicos por banda para D2D-NTN}
 \label{tab:band_requirements}
@@ -41,6 +41,6 @@ Sub-7 GHz (n256) & 10-20 MHz & $\sim 15$ & Bajo \\
 Ka-band & 100-400 MHz & $\sim 45$ & Alto \\
 \hline
 \end{tabular}
-\end{table}
+\end{table*}
 
 La Tabla 3 resume los principales requisitos y trade-offs por banda. La arquitectura propuesta incorpora un módulo de orquestación que realiza asignación conjunta de recursos, priorizando enlaces terrestres en áreas densas y satelitales en zonas de baja cobertura. Esta aproximación mejora notablemente la eficiencia espectral global, aunque aumenta la complejidad de implementación en el core network.
