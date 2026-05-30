@@ -24,3 +24,5 @@ main.run.xml
 *.pdf
 
 export_pdf.py
+codes/backup/
+*.drawio.bkp
